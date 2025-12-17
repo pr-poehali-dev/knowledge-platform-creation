@@ -31,58 +31,58 @@ export function Quiz({ onNavigate }: QuizProps) {
   const questions: Question[] = [
     {
       id: 1,
-      question: 'Что такое HTML?',
+      question: 'Какое правило обслуживания считается золотым стандартом?',
       options: [
-        'Язык программирования',
-        'Язык разметки гипертекста',
-        'База данных',
-        'Фреймворк для JavaScript',
+        'Гость всегда прав',
+        'Скорость важнее качества',
+        'Приветствовать гостя не обязательно',
+        'Выполнять только свои обязанности',
       ],
-      correctAnswer: 1,
-      explanation: 'HTML (HyperText Markup Language) — это язык разметки, используемый для создания структуры веб-страниц.',
-      category: 'Веб-разработка',
+      correctAnswer: 0,
+      explanation: 'Главный принцип гостеприимства — удовлетворение потребностей гостя. Гость всегда прав, даже если он не прав.',
+      category: 'Сервис',
     },
     {
       id: 2,
-      question: 'Какой метод используется для добавления элемента в конец массива в JavaScript?',
-      options: ['append()', 'push()', 'add()', 'insert()'],
+      question: 'Какая температура подачи красного вина?',
+      options: ['Холодное (6-8°C)', 'Комнатной температуры (16-18°C)', 'Горячее (25-30°C)', 'Ледяное (0-2°C)'],
       correctAnswer: 1,
-      explanation: 'Метод push() добавляет один или несколько элементов в конец массива и возвращает новую длину массива.',
-      category: 'JavaScript',
+      explanation: 'Красное вино подается при комнатной температуре 16-18°C, чтобы раскрылись все ароматы и вкус.',
+      category: 'Бар/Сомелье',
     },
     {
       id: 3,
-      question: 'Что означает CSS?',
+      question: 'Что такое HACCP?',
       options: [
-        'Computer Style Sheets',
-        'Cascading Style Sheets',
-        'Creative Style System',
-        'Colorful Style Sheets',
+        'Система управления персоналом',
+        'Система анализа рисков и критических точек',
+        'Программа обучения',
+        'Система закупок',
       ],
       correctAnswer: 1,
-      explanation: 'CSS (Cascading Style Sheets) — каскадные таблицы стилей, используемые для оформления веб-страниц.',
-      category: 'Веб-разработка',
+      explanation: 'HACCP — это международная система анализа рисков и критических контрольных точек для обеспечения безопасности пищи.',
+      category: 'Кухня',
     },
     {
       id: 4,
-      question: 'Какой хук React используется для управления состоянием компонента?',
-      options: ['useEffect', 'useState', 'useContext', 'useReducer'],
-      correctAnswer: 1,
-      explanation: 'useState — основной хук для добавления состояния в функциональные компоненты React.',
-      category: 'React',
+      question: 'С какой стороны подается блюдо гостю?',
+      options: ['Слева', 'Справа', 'Спереди', 'С любой стороны'],
+      correctAnswer: 0,
+      explanation: 'Блюда подаются слева от гостя, а напитки — справа. Это международный стандарт обслуживания.',
+      category: 'Сервис',
     },
     {
       id: 5,
-      question: 'Что такое API?',
+      question: 'Какой основной ингредиент в коктейле "Мохито"?',
       options: [
-        'Application Programming Interface',
-        'Advanced Programming Integration',
-        'Automated Process Interface',
-        'Application Process Integration',
+        'Водка',
+        'Ром',
+        'Джин',
+        'Текила',
       ],
-      correctAnswer: 0,
-      explanation: 'API (Application Programming Interface) — интерфейс программирования приложений, набор методов для взаимодействия между программами.',
-      category: 'Веб-разработка',
+      correctAnswer: 1,
+      explanation: 'Мохито — это кубинский коктейль на основе белого рома, мяты, лайма, сахара и содовой.',
+      category: 'Бар',
     },
   ];
 
@@ -137,7 +137,7 @@ export function Quiz({ onNavigate }: QuizProps) {
               <div>
                 <CardTitle className="text-3xl mb-2">Проверка знаний</CardTitle>
                 <CardDescription className="text-base">
-                  Пройдите тест и проверьте свои знания по веб-разработке
+                  Пройдите тест и проверьте знания по ресторанному делу
                 </CardDescription>
               </div>
             </CardHeader>

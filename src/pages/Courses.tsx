@@ -16,62 +16,62 @@ export function Courses({ onNavigate }: CoursesProps) {
   const courses = [
     {
       id: 1,
-      title: 'Основы веб-разработки',
-      description: 'Изучите HTML, CSS и основы JavaScript для создания современных веб-сайтов',
+      title: 'Стандарты обслуживания гостей',
+      description: 'Основы гостеприимства, этикет и протоколы работы с гостями ресторана',
       progress: 75,
-      lessons: 24,
-      completed: 18,
-      duration: '40 часов',
+      lessons: 12,
+      completed: 9,
+      duration: '8 часов',
       level: 'Начинающий',
-      category: 'Программирование',
+      category: 'Сервис',
       instructor: 'Анна Петрова',
     },
     {
       id: 2,
-      title: 'JavaScript продвинутый',
-      description: 'Погрузитесь в асинхронное программирование, замыкания и прототипы',
+      title: 'Винная карта и сомелье',
+      description: 'Изучение вин, правила подачи и сочетание с блюдами',
       progress: 45,
-      lessons: 32,
-      completed: 14,
-      duration: '60 часов',
-      level: 'Средний',
-      category: 'Программирование',
+      lessons: 16,
+      completed: 7,
+      duration: '12 часов',
+      level: 'Продвинутый',
+      category: 'Бар/Сомелье',
       instructor: 'Дмитрий Соколов',
     },
     {
       id: 3,
-      title: 'React и современный фронтенд',
-      description: 'Создавайте интерактивные приложения с React, hooks и state management',
-      progress: 60,
-      lessons: 28,
-      completed: 17,
-      duration: '50 часов',
-      level: 'Средний',
-      category: 'Программирование',
+      title: 'Техника безопасности на кухне',
+      description: 'Правила безопасности, санитарные нормы и HACCP',
+      progress: 90,
+      lessons: 10,
+      completed: 9,
+      duration: '6 часов',
+      level: 'Начинающий',
+      category: 'Кухня',
       instructor: 'Мария Иванова',
     },
     {
       id: 4,
-      title: 'UI/UX Дизайн',
-      description: 'Основы проектирования интерфейсов и пользовательского опыта',
+      title: 'Барное дело и миксология',
+      description: 'Классические и современные коктейли, техника приготовления',
       progress: 0,
-      lessons: 20,
+      lessons: 14,
       completed: 0,
-      duration: '35 часов',
-      level: 'Начинающий',
-      category: 'Дизайн',
+      duration: '10 часов',
+      level: 'Средний',
+      category: 'Бар',
       instructor: 'Ольга Смирнова',
     },
     {
       id: 5,
-      title: 'Python для анализа данных',
-      description: 'Pandas, NumPy и визуализация данных с Matplotlib',
+      title: 'Управление конфликтами',
+      description: 'Работа с трудными гостями, решение конфликтных ситуаций',
       progress: 0,
-      lessons: 26,
+      lessons: 8,
       completed: 0,
-      duration: '45 часов',
+      duration: '4 часа',
       level: 'Средний',
-      category: 'Data Science',
+      category: 'Сервис',
       instructor: 'Алексей Волков',
     },
   ];
@@ -136,12 +136,12 @@ export function Courses({ onNavigate }: CoursesProps) {
       <div className="max-w-7xl mx-auto space-y-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-4xl font-bold text-foreground mb-2">Мои курсы</h1>
-            <p className="text-muted-foreground text-lg">Управляйте своим обучением</p>
+            <h1 className="text-4xl font-bold text-foreground mb-2">Программы обучения</h1>
+            <p className="text-muted-foreground text-lg">Курсы для команды ресторана</p>
           </div>
           <Button size="lg" onClick={() => onNavigate('quiz')}>
-            <Icon name="PlayCircle" className="mr-2" />
-            Пройти тест
+            <Icon name="ClipboardCheck" className="mr-2" />
+            Создать тест
           </Button>
         </div>
 

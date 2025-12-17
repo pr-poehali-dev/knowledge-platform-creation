@@ -9,24 +9,24 @@ interface HomeProps {
 
 export function Home({ onNavigate }: HomeProps) {
   const stats = [
-    { label: 'Пройдено курсов', value: '12', icon: 'BookCheck', color: 'text-primary' },
-    { label: 'Часов обучения', value: '156', icon: 'Clock', color: 'text-secondary' },
-    { label: 'Получено сертификатов', value: '8', icon: 'Award', color: 'text-accent' },
-    { label: 'Текущий рейтинг', value: '4.8', icon: 'Star', color: 'text-yellow-500' },
+    { label: 'Обучено сотрудников', value: '24', icon: 'Users', color: 'text-primary' },
+    { label: 'Часов обучения', value: '312', icon: 'Clock', color: 'text-secondary' },
+    { label: 'Получено сертификатов', value: '18', icon: 'Award', color: 'text-accent' },
+    { label: 'Средний балл команды', value: '4.7', icon: 'Star', color: 'text-yellow-600' },
   ];
 
-  const recentCourses = [
-    { id: 1, title: 'Основы веб-разработки', progress: 75, lessons: 24, completed: 18 },
-    { id: 2, title: 'JavaScript продвинутый', progress: 45, lessons: 32, completed: 14 },
-    { id: 3, title: 'React и современный фронтенд', progress: 60, lessons: 28, completed: 17 },
+  const activeTrainings = [
+    { id: 1, title: 'Стандарты обслуживания гостей', progress: 75, employees: 8, completed: 6 },
+    { id: 2, title: 'Винная карта и сомелье', progress: 45, employees: 4, completed: 2 },
+    { id: 3, title: 'Техника безопасности на кухне', progress: 90, employees: 12, completed: 11 },
   ];
 
   return (
     <div className="p-8 animate-fade-in">
       <div className="max-w-7xl mx-auto space-y-8">
         <div>
-          <h1 className="text-4xl font-bold text-foreground mb-2">Добро пожаловать на платформу!</h1>
-          <p className="text-muted-foreground text-lg">Продолжайте обучение и достигайте новых высот</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">Добро пожаловать в HoReCa Academy!</h1>
+          <p className="text-muted-foreground text-lg">Управляйте обучением команды ресторана</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -48,28 +48,28 @@ export function Home({ onNavigate }: HomeProps) {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Icon name="TrendingUp" className="text-primary" />
-                Продолжить обучение
+                Активные программы обучения
               </CardTitle>
-              <CardDescription>Ваши активные курсы</CardDescription>
+              <CardDescription>Текущие курсы для команды</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              {recentCourses.map((course) => (
-                <div key={course.id} className="p-4 border rounded-lg hover:border-primary transition-colors cursor-pointer">
+              {activeTrainings.map((training) => (
+                <div key={training.id} className="p-4 border rounded-lg hover:border-primary transition-colors cursor-pointer">
                   <div className="flex items-start justify-between mb-3">
                     <div>
-                      <h3 className="font-semibold text-lg mb-1">{course.title}</h3>
+                      <h3 className="font-semibold text-lg mb-1">{training.title}</h3>
                       <p className="text-sm text-muted-foreground">
-                        {course.completed} из {course.lessons} уроков пройдено
+                        {training.completed} из {training.employees} сотрудников завершили
                       </p>
                     </div>
-                    <span className="text-2xl font-bold text-primary">{course.progress}%</span>
+                    <span className="text-2xl font-bold text-primary">{training.progress}%</span>
                   </div>
-                  <Progress value={course.progress} className="h-2" />
+                  <Progress value={training.progress} className="h-2" />
                 </div>
               ))}
               <Button onClick={() => onNavigate('courses')} className="w-full" size="lg">
-                <Icon name="BookOpen" className="mr-2" size={20} />
-                Все курсы
+                <Icon name="GraduationCap" className="mr-2" size={20} />
+                Все программы обучения
               </Button>
             </CardContent>
           </Card>
@@ -79,20 +79,20 @@ export function Home({ onNavigate }: HomeProps) {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Icon name="Target" className="text-accent" />
-                  Цель недели
+                  План на месяц
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div>
                     <div className="flex justify-between text-sm mb-2">
-                      <span className="text-muted-foreground">Пройти 5 уроков</span>
-                      <span className="font-semibold">3/5</span>
+                      <span className="text-muted-foreground">Обучить 10 сотрудников</span>
+                      <span className="font-semibold">7/10</span>
                     </div>
-                    <Progress value={60} className="h-2" />
+                    <Progress value={70} className="h-2" />
                   </div>
                   <p className="text-xs text-muted-foreground">
-                    Еще 2 урока до достижения цели!
+                    Еще 3 сотрудника до достижения цели!
                   </p>
                 </div>
               </CardContent>
@@ -101,16 +101,16 @@ export function Home({ onNavigate }: HomeProps) {
             <Card className="bg-gradient-to-br from-primary to-secondary text-primary-foreground">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Icon name="Zap" />
-                  Пройди тест
+                  <Icon name="ClipboardCheck" />
+                  Проверка знаний
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm mb-4 opacity-90">
-                  Проверь свои знания по последним пройденным темам
+                  Проведите тестирование сотрудников по пройденным темам
                 </p>
                 <Button onClick={() => onNavigate('quiz')} variant="secondary" className="w-full">
-                  Начать тестирование
+                  Создать тест
                 </Button>
               </CardContent>
             </Card>
@@ -120,20 +120,20 @@ export function Home({ onNavigate }: HomeProps) {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Icon name="Lightbulb" className="text-yellow-500" />
-              Рекомендации для вас
+              <Icon name="Sparkles" className="text-primary" />
+              Рекомендуемые курсы
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {[
-                { title: 'TypeScript для начинающих', category: 'Программирование', duration: '8 часов' },
-                { title: 'UI/UX дизайн основы', category: 'Дизайн', duration: '6 часов' },
-                { title: 'Алгоритмы и структуры данных', category: 'Программирование', duration: '12 часов' },
+                { title: 'Управление конфликтами с гостями', category: 'Сервис', duration: '4 часа', icon: 'MessageSquare' },
+                { title: 'Современные техники приготовления', category: 'Кухня', duration: '8 часов', icon: 'ChefHat' },
+                { title: 'Барное дело и миксология', category: 'Бар', duration: '6 часов', icon: 'Wine' },
               ].map((rec, index) => (
                 <div key={index} className="p-4 border rounded-lg hover:border-primary transition-colors cursor-pointer">
                   <div className="w-full h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg mb-3 flex items-center justify-center">
-                    <Icon name="BookOpen" size={40} className="text-primary" />
+                    <Icon name={rec.icon} size={40} className="text-primary" />
                   </div>
                   <h4 className="font-semibold mb-1">{rec.title}</h4>
                   <div className="flex items-center justify-between text-xs text-muted-foreground">

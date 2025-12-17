@@ -10,67 +10,67 @@ export function Knowledge() {
 
   const categories = [
     {
-      id: 'web',
-      title: 'Веб-разработка',
-      icon: 'Code',
+      id: 'service',
+      title: 'Сервис и гостеприимство',
+      icon: 'Users',
       color: 'text-blue-500',
       articles: [
-        { title: 'Что такое HTML и зачем он нужен?', views: 1234, updated: '2 дня назад' },
-        { title: 'CSS Grid vs Flexbox: когда использовать', views: 890, updated: '1 неделю назад' },
-        { title: 'Async/Await в JavaScript', views: 2103, updated: '3 дня назад' },
-        { title: 'Основы работы с API', views: 1567, updated: '5 дней назад' },
+        { title: 'Основы этикета официанта', views: 2134, updated: '2 дня назад' },
+        { title: 'Как работать с трудными гостями', views: 1890, updated: '1 неделю назад' },
+        { title: 'Стандарты обслуживания за столом', views: 3103, updated: '3 дня назад' },
+        { title: 'Правила приема заказов', views: 1567, updated: '5 дней назад' },
       ],
     },
     {
-      id: 'react',
-      title: 'React и фронтенд',
-      icon: 'Blocks',
-      color: 'text-cyan-500',
-      articles: [
-        { title: 'React Hooks: полное руководство', views: 3421, updated: '1 день назад' },
-        { title: 'State Management: Redux vs Context', views: 1876, updated: '4 дня назад' },
-        { title: 'Оптимизация производительности React', views: 2134, updated: '1 неделю назад' },
-      ],
-    },
-    {
-      id: 'backend',
-      title: 'Backend и базы данных',
-      icon: 'Database',
-      color: 'text-green-500',
-      articles: [
-        { title: 'REST API: лучшие практики', views: 1678, updated: '2 дня назад' },
-        { title: 'SQL vs NoSQL: что выбрать?', views: 2345, updated: '1 неделю назад' },
-        { title: 'Основы Node.js', views: 1923, updated: '3 дня назад' },
-      ],
-    },
-    {
-      id: 'tools',
-      title: 'Инструменты разработки',
-      icon: 'Wrench',
+      id: 'kitchen',
+      title: 'Кухня и приготовление',
+      icon: 'ChefHat',
       color: 'text-orange-500',
       articles: [
-        { title: 'Git и GitHub для начинающих', views: 4521, updated: '1 день назад' },
-        { title: 'Docker: контейнеризация приложений', views: 1234, updated: '5 дней назад' },
-        { title: 'VS Code: полезные расширения', views: 3456, updated: '2 дня назад' },
+        { title: 'Техника безопасности на кухне', views: 4321, updated: '1 день назад' },
+        { title: 'HACCP: основные принципы', views: 2876, updated: '4 дня назад' },
+        { title: 'Современные техники приготовления', views: 3134, updated: '1 неделю назад' },
       ],
     },
     {
-      id: 'design',
-      title: 'Дизайн и UX',
-      icon: 'Palette',
+      id: 'bar',
+      title: 'Бар и напитки',
+      icon: 'Wine',
       color: 'text-purple-500',
       articles: [
-        { title: 'Принципы Material Design', views: 987, updated: '4 дня назад' },
-        { title: 'Цветовая теория в веб-дизайне', views: 1432, updated: '1 неделю назад' },
-        { title: 'Типографика: основы', views: 765, updated: '3 дня назад' },
+        { title: 'Классические коктейли: рецепты', views: 2678, updated: '2 дня назад' },
+        { title: 'Винная карта: как составить', views: 3345, updated: '1 неделю назад' },
+        { title: 'Сочетание вина с блюдами', views: 2923, updated: '3 дня назад' },
+      ],
+    },
+    {
+      id: 'management',
+      title: 'Управление и администрирование',
+      icon: 'Briefcase',
+      color: 'text-slate-500',
+      articles: [
+        { title: 'Управление персоналом ресторана', views: 3521, updated: '1 день назад' },
+        { title: 'Контроль закупок и склада', views: 2234, updated: '5 дней назад' },
+        { title: 'Финансовый учет в ресторане', views: 2856, updated: '2 дня назад' },
+      ],
+    },
+    {
+      id: 'hotel',
+      title: 'Отельное дело',
+      icon: 'Hotel',
+      color: 'text-cyan-500',
+      articles: [
+        { title: 'Стандарты уборки номеров', views: 1987, updated: '4 дня назад' },
+        { title: 'Работа службы reception', views: 2432, updated: '1 неделю назад' },
+        { title: 'Протоколы безопасности гостей', views: 1765, updated: '3 дня назад' },
       ],
     },
   ];
 
   const popularArticles = [
-    { title: 'Git и GitHub для начинающих', category: 'Инструменты', views: 4521 },
-    { title: 'React Hooks: полное руководство', category: 'React', views: 3421 },
-    { title: 'VS Code: полезные расширения', category: 'Инструменты', views: 3456 },
+    { title: 'Техника безопасности на кухне', category: 'Кухня', views: 4321 },
+    { title: 'Управление персоналом ресторана', category: 'Управление', views: 3521 },
+    { title: 'Винная карта: как составить', category: 'Бар', views: 3345 },
   ];
 
   const filteredCategories = categories.map(cat => ({
@@ -85,7 +85,7 @@ export function Knowledge() {
       <div className="max-w-7xl mx-auto space-y-8">
         <div>
           <h1 className="text-4xl font-bold text-foreground mb-2">База знаний</h1>
-          <p className="text-muted-foreground text-lg">Полезные материалы и статьи по разработке</p>
+          <p className="text-muted-foreground text-lg">Материалы по HoReCa: от сервиса до управления</p>
         </div>
 
         <div className="relative">
